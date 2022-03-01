@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/green"
+
+    tools:context=".ShowActivity">
+
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="750px"
+        android:layout_marginTop="350px"
+        android:fontFamily="sans-serif-condensed"
+        android:text="TextView"
+        android:textColor="#6a686a"
+        android:textSize="60px">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="750px"
+        android:layout_marginTop="950px"
+        android:fontFamily="sans-serif-condensed"
+        android:text="TextView"
+        android:textColor="#6a686a"
+        android:textSize="60px">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="750px"
+        android:layout_marginTop="1150px"
+        android:fontFamily="sans-serif-condensed"
+        android:text="TextView"
+        android:textColor="#6a686a"
+        android:textSize="60px">
+
+    </TextView>
+
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="750px"
+        android:layout_marginTop="550px"
+        android:fontFamily="sans-serif-condensed"
+        android:text="TextView"
+        android:textColor="#6a686a"
+        android:textSize="60px"
+        tools:ignore="MissingConstraints">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="750px"
+        android:layout_marginTop="750px"
+        android:fontFamily="sans-serif-condensed"
+        android:text="TextView"
+        android:textColor="#6a686a"
+        android:textSize="60px">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/t1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30px"
+        android:layout_marginTop="350px"
+        android:fontFamily="sans-serif-condensed"
+        android:gravity="center"
+        android:text="@string/t1"
+        android:textColor="@color/black"
+        android:textSize="60px">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/t2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30px"
+        android:layout_marginTop="550px"
+        android:fontFamily="sans-serif-condensed"
+        android:gravity="center"
+        android:text="@string/t2"
+        android:textColor="@color/black"
+        android:textSize="60px">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/t3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30px"
+        android:layout_marginTop="750px"
+        android:fontFamily="sans-serif-condensed"
+        android:gravity="center"
+        android:text="@string/t3"
+        android:textColor="@color/black"
+        android:textSize="60px">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/t4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30px"
+        android:layout_marginTop="950px"
+        android:fontFamily="sans-serif-condensed"
+        android:gravity="center"
+        android:text="@string/t4"
+        android:textColor="@color/black"
+        android:textSize="60px">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/t5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30px"
+        android:layout_marginTop="1150px"
+        android:fontFamily="sans-serif-condensed"
+        android:gravity="center"
+        android:text="@string/t5"
+        android:textColor="@color/black"
+        android:textSize="60px">
+
+    </TextView>
+
+
+    <TextView
+        android:id="@+id/textView23"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="27dp"
+        android:fontFamily="@font/anton"
+        android:shadowColor="#474343"
+        android:text="@string/details"
+        android:textColor="@color/black"
+        android:textColorHighlight="#958C8C"
+        android:textSize="120px"
+        android:textStyle="bold" />
+
+
+</RelativeLayout>

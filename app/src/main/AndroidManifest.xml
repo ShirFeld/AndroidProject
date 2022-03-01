@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.finalandroidproject">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.FinalAndroidProject">
+        <activity
+            android:name=".ShowActivity"
+            android:label="User Details"
+            android:exported="false"
+            android:parentActivityName=".MainActivity2" /> />
+        <activity
+            android:name=".MainActivity5"
+            android:label="Last Page"
+            android:parentActivityName=".MainActivity2" /> <!-- היררכיה של מסכים -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="false"
+            android:label="Welcome" />
+        <activity
+            android:name=".MainActivity4"
+            android:exported="false"
+            android:label="Feed back"
+            android:parentActivityName=".MainActivity2" /> <!-- היררכיה של מסכים -->
+        <activity
+            android:name=".MainActivity3"
+            android:exported="false"
+            android:label="My Profile" /> <!-- android:parentActivityName=".MainActivity2"  &lt;!&ndash; היררכיה של מסכים &ndash;&gt; -->
+        <activity
+            android:name=".MainActivity2"
+            android:label="Cat Sitter" /> <!-- android:parentActivityName=".MainActivity" -->
+        <activity
+            android:name=".SplashActivity"
+            android:exported="true"
+            android:label="Welcome">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

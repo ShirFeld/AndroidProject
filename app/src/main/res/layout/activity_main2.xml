@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    android:background="@drawable/green"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity2">
+
+
+<!-- layout_alignParentStart : place it on left
+         layout_alignParentTop : place it on top
+         divider : קו מפריד בין ההודעות
+         dividerHeight : עושה רווח בין ההודעות
+         android:hint = inner txt
+    -->
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/buttonMain2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="25dp"
+        android:backgroundTint="@color/black"
+        android:clickable="true"
+        android:fontFamily="sans-serif-light"
+        android:onClick="sendToProfile"
+        android:text="@string/btn_main2"
+
+        tools:ignore="OnClick,SpeakableTextPresentCheck,SpeakableTextPresentCheck" />  <!-- שורה אחת למעלה מורידה את הכפתור למטה ופה זה מזיז לנו את הכפתור לצד ימין-->
+
+
+    <ListView
+        android:id="@+id/am2_list"
+        android:layout_width="wrap_content"
+        android:layout_height="273dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="117dp"
+        android:layout_marginEnd="2dp"
+        android:choiceMode="multipleChoice"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="8dp" />
+
+    <TextView
+        android:id="@+id/textViewMain2"
+        android:layout_width="wrap_content"
+        android:layout_height="74dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="99dp"
+        android:background="@drawable/p0"
+        android:fontFamily="sans-serif-light"
+        android:gravity="center"
+        android:text="@string/textViewMain2"
+        android:textSize="60px" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="28dp"
+        android:fontFamily="@font/anton"
+        android:shadowColor="#474343"
+        android:text="@string/textView2"
+        android:textColor="@color/black"
+        android:textColorHighlight="#958C8C"
+        android:textSize="114px"
+        android:textStyle="bold" />
+
+
+</RelativeLayout>

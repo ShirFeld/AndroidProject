@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">FinalAndroidProject</string>
+    <string name="login">Login</string>
+    <string name="Adoption_of_cats">Cats and us</string>
+    <string name="EditText">Enter your name</string>
+    <string name="textViewMain2">If you want to become part of the cat Sitters press the button.</string>
+    <string name="textView2">Catsitter users</string>
+    <string name="btn_main2">press</string>
+    <string name="newProfile">new account</string>
+    <string name="label">Enter your name</string>
+    <string name="label2">Enter your age</string>
+    <string name="label3">Enter your city</string>
+    <string name="label4">Do you have any animals? </string>
+    <string name="label5">Enter your phone number</string>
+    <string name="btn_main3">send</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="aboutUs"> We want to get better for you</string>
+    <string name="check1">Design</string>
+    <string name="check2">Convenient menu</string>
+    <string name="check3">Clear instructions</string>
+    <string name="check4">Quick registration</string>
+    <string name="check5">Easy-to-use</string>
+    <string name="check6">Valuable</string>
+    <string name="selectMain4">Please select what you liked in our app from the options</string>
+    <string name="Thanks">Thanks for download our app</string>
+    <string name="txtMain5">We hope you enjoyed and joined our Cat-Sitter list</string>
+    <string name="txtMain6">↓ Press on the video ↓ </string>
+    <string name="t1">Name:</string>
+    <string name="t2">Age:</string>
+    <string name="t3">City:</string>
+    <string name="t4">Phone number:</string>
+    <string name="t5">Do you have animals?</string>
+    <string name="details">User Details</string>
+
+
+
+
+</resources>
