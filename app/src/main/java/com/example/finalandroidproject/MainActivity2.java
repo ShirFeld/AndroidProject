@@ -29,13 +29,13 @@ public class MainActivity2 extends AppCompatActivity {
 
     public  ListView listView;
     public  ArrayAdapter<String> adapter;
-    private List<String> listData;          // דף ראשי של הדטא בייס ----> שמות של האובייקטים
-    private List<Person> listTemp;          // דף משני של דטא בייס ----> עם כל הפרטים של האובייקטים
+    private List<String> listData;          // Main Page of the Database ----> Names of the objects
+    private List<Person> listTemp;          // Another page of Database ----> with all the details of the objects
 
     private DatabaseReference mDatabase;
     private String PERSON_KEY = "Person";
 
-    private static final int sign_in_from_create = 1; // מאיפה פתחנו את האקטיביטי של התחברות\הרשמה
+    private static final int sign_in_from_create = 1; // Status code for sign-in activity
 
 
 
@@ -101,7 +101,7 @@ public class MainActivity2 extends AppCompatActivity {
                 for (DataSnapshot ds : snapshot.getChildren()) {        // מחלצים מידע ספציפי ממידע כולל
                     Person person = ds.getValue(Person.class);            // פה נקבל את המידע על כל משתמש באיטרציה
                     assert person != null ;
-                    listData.add(person.name);
+                    listData.add(person.getName());
                     listTemp.add(person);
                 }
 
@@ -120,7 +120,7 @@ public class MainActivity2 extends AppCompatActivity {
 
 
 
-    //  כאן נוכל ללחוץ על המשתמש ברשימה ולראות את כל שאר הפרטים. כרגע רואים רק שם
+    // In this function we can click the name of the object and then we will get the rest of the details.
     private void setOnClickItem(){
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
@@ -129,11 +129,11 @@ public class MainActivity2 extends AppCompatActivity {
                 Person person= listTemp.get(position);
 
                 Intent intent = new Intent(MainActivity2.this , ShowActivity.class);
-                intent.putExtra("user_name", person.name);
-                intent.putExtra("user_age", person.age);
-                intent.putExtra("user_city", person.city);
-                intent.putExtra("user_phone", person.phone);
-                intent.putExtra("user_animals", person.hasAnyOtherAnimals);
+                intent.putExtra("user_name", person.getName());
+                intent.putExtra("user_age", person.getAge());
+                intent.putExtra("user_city", person.getCity());
+                intent.putExtra("user_phone", person.getPhone());
+                intent.putExtra("user_animals", person.getHasAnyOtherAnimals());
                 startActivity(intent);
             }
         });
@@ -145,29 +145,26 @@ public class MainActivity2 extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // returns MenuInflater object  -    מאכלס את התפריט עם מה שהעברנו בקובץ , מעביר את המזהה והכל  XML
-        getMenuInflater().inflate(R.menu.menu_main,menu); //  חלק שמאל של הפסיק - איפה נמצא הקובץ שבו יש לנו אלמנטים ויזואלים של התפריט. מימין לפסיק - רפרנס בזמן ריצה, איפה נשים את האלמנטים
+        getMenuInflater().inflate(R.menu.menu_main,menu);
         return true;
     }
 
     // menu options
     @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {  // אנחנו הולכים לitem בזמן ריצה
-
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {  // Ae go to the item while the program is running
         if (item.getItemId()==R.id.Feedback)
             Feedback();
         if(item.getItemId()==R.id.Last_page)
             LastPage();
         if (item.getItemId()==R.id.log_out_item)
             logOut();
-
-        return true;  // האם מה שאני רוצה שיופעל פעל- לא אכפת לי אם זה בהצלחה או לא
+        return true;
     }
 
 
 
     // menu methods
-    private void logOut() { //Task = בצורה אסינכרונית
+    private void logOut() { //Task = Asynchronously
         AuthUI.getInstance().signOut(this) // AuthUI.getInstance() -> gives us this user  , this = who to logout
                 .addOnCompleteListener(task ->{
                     Toast.makeText(MainActivity2.this,"Logged-out",Toast.LENGTH_LONG).show();  //(where the message will be , what the message is , how much time)

@@ -5,12 +5,12 @@ import android.widget.EditText;
 import java.util.List;
 
 public class Person {
-    public String id;
-    public String name;
-    public String age;
-    public String city;
-    public String hasAnyOtherAnimals;
-    public String phone;
+    private String id;
+    private String name;
+    private String age;
+    private String city;
+    private String hasAnyOtherAnimals;
+    private String phone;
     public static int counter = 0;
 
     public Person(){}
@@ -24,6 +24,26 @@ public class Person {
         this.phone = phone;
         Person.counter++;
     }
+
+    public String getId(){
+        return this.id;
+    }
+    public String getName(){
+        return this.name;
+    }
+    public String getAge(){
+        return this.age;
+    }
+    public String getCity(){
+        return this.city;
+    }
+    public String getPhone(){
+        return this.phone;
+    }
+    public String getHasAnyOtherAnimals() {
+        return this.id;
+    }
+
 
     @Override
     public String toString() {

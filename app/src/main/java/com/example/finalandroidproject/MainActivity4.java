@@ -99,7 +99,7 @@
 
 
 
-     // הפונקציה שתפעל כאשר נלחץ על הכפתור , תתחיל ספירה לאחור
+     // When the button is pressed the countdown will begin
      public void startThread(View view){
          ExampleRunnable runnable = new ExampleRunnable(6);
          new Thread(runnable).start();

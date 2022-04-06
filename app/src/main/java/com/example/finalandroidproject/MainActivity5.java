@@ -21,7 +21,7 @@ public class MainActivity5 extends AppCompatActivity {
         video1.setVideoURI(uri);
 
 
-        // כדי שיהיה לנו כפתור לעצור , להמשיך את הסרטון
+        // Button to stop and continue the video
         MediaController mediaController = new MediaController(this);
         video1.setMediaController(mediaController);
         mediaController.setAnchorView(video1);
