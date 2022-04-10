@@ -85,27 +85,27 @@ public class MainActivity2 extends AppCompatActivity {
     private void init(){
         listView = findViewById(R.id.am2_list);
         listData = new ArrayList<>();
-        adapter = new ArrayAdapter<>(this,android.R.layout.simple_list_item_1,listData); // simple_list_item_1 --> פריסה מובנת שמספקת מראה סטנדרטי ברשימה
+        adapter = new ArrayAdapter<>(this,android.R.layout.simple_list_item_1,listData); // simple_list_item_1 --> Provides a standard look in the list
         listView.setAdapter(adapter);
-        mDatabase = FirebaseDatabase.getInstance().getReference(PERSON_KEY);  // הפניה לדטא בייס שלנו
+        mDatabase = FirebaseDatabase.getInstance().getReference(PERSON_KEY);  // Reference to our data base
         listTemp = new ArrayList<>();
     }
 
 
     private void getDataFromDB(){
-        if (listData.size() > 0) listData.clear();  // אם יש לנו ברשימה כבר מידע אנחנו נמחק אותו כדי שנקבל שוב את המידע המעודכן
+        if (listData.size() > 0) listData.clear();  // If we already have information in the list we will delete it so that we get the updated information again
         if (listTemp.size() > 0) listTemp.clear();
-        ValueEventListener vListener = new ValueEventListener() {   // קשור לפיירבייס עם השרת ואבטחה
+        ValueEventListener vListener = new ValueEventListener() {   // This part talks about Firebase with server and security
             @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {  // DataSnapshot --> מכילה נתונים ממסד  הנתונים שלנו/
-                for (DataSnapshot ds : snapshot.getChildren()) {        // מחלצים מידע ספציפי ממידע כולל
-                    Person person = ds.getValue(Person.class);            // פה נקבל את המידע על כל משתמש באיטרציה
+            public void onDataChange(@NonNull DataSnapshot snapshot) {  // DataSnapshot --> Contains data from our database
+                for (DataSnapshot ds : snapshot.getChildren()) {        // Extract specific information
+                    Person person = ds.getValue(Person.class);            // Here we will get the information about each user
                     assert person != null ;
                     listData.add(person.getName());
                     listTemp.add(person);
                 }
 
-                // עכשיו נעדכן את האדפטר שלנו שהמידע השתנה
+                //We will update our adapter that the information has changed
                 adapter.notifyDataSetChanged();
             }
 
