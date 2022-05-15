@@ -25,31 +25,31 @@ A small project on a free babysitter on animals.
 
 ## **2. Registration page**
 
-<img style src="./pic/2.PNG" title="Category Page" />
+<img style src="./pic/2.PNG" title="Registration Page" />
 
 <br><br>
 
 ## **3. Users**
 
-<img style src="./pic/3.PNG" title="Product Page" />
+<img style src="./pic/3.PNG" title="Users Page" />
 
 <br><br>
 
 ## **4. Add details to the list**
 
-<img style src="./pic/4.PNG" title="Cart Page" />
+<img style src="./pic/4.PNG" title="details Page" />
 
 <br><br>
 
 ## **5. Feedback page**
 
-<img style src="./pic/5.PNG" title="Payment Details Page" />
+<img style src="./pic/5.PNG" title="Feedback Page" />
 
 <br><br>
 
 ## **6. Last page**
 
-<img style src="./pic/6.PNG title="Purchased Made Page" />
+<img style src="./pic/6.PNG title="Last Page" />
 
 <br><br>
 
