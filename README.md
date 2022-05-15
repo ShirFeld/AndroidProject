@@ -14,7 +14,7 @@ A small project on a free babysitter on animals.
 <br>
 
 
-
+> NOTE: if one of the pictures are not working - all in pic folder
 
 ## ScreenShots - 
 ## **1. HOME PAGE**
